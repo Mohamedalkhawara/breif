@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import'./components/Footer'
+import Footer from './components/Footer';
 
 function App() {
   return (
    <div>
 
-    <h2>hello  fdf abbsji</h2>
+ <Footer/>
     </div>
   );
 }
