@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import './styles/css/style.css';
 import './styles/scss/style.scss';
 
+import './styles/css/style.css';
+import './styles/scss/style.scss';
 function App() {
   return (
    <div>

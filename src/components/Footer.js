@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Footer = () => {
   return (
     <footer className="ftco-footer ftco-bg-dark ftco-section">
