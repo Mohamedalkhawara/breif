@@ -6,13 +6,11 @@ import './styles/css/animate.css';
 import './styles/scss/style.scss';
 import Banner from './components/Banner';
 import PricingCard from './components/PricingCard';
-import Home2 from './Home2';
 
 // Import Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import PricingSection from './components/PricingSection';
 
-function App() {
+function Home2() {
   const pricingPlans = [
     {
       planName: 'Basic Plan',
@@ -51,11 +49,33 @@ function App() {
   return (
     <>
       <Banner />
-      <PricingSection/>
-      <Footer/>
+      
+      <section className="ftco-section bg-light">
+        <div className="container">
+          <div className="row justify-content-center mb-5 pb-3">
+            <div className="col-md-7 text-center heading-section">
+              <h2 className="mb-4">Our Best Pricing</h2>
+            </div>
+          </div>
+          <div className="row d-flex">
+            {pricingPlans.map((plan, index) => (
+              <PricingCard
+                key={index}
+                planName={plan.planName}
+                price={plan.price}
+                period={plan.period}
+                excerpt={plan.excerpt}
+                features={plan.features}
+                buttonText={plan.buttonText}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
+      <Footer />
     </>
   );
 }
 
-export default App;
+export default Home2;
